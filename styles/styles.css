@@ -1,9 +1,14 @@
+/* html {
+  height: 100%;
+} */
+
 body {
   font-family: 'Kumbh Sans', sans-serif;
   font-size: 12px;
   height: 100vh;
   margin: 0;
   background-image: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+  background-repeat: no-repeat;
 }
 
 main {
@@ -153,11 +158,11 @@ p {
 .attribution a { color: hsl(228, 45%, 44%); }
 
 
-@media (max-width: 720px) {
+@media (max-width: 720px) and (max-height: 768px) {
 
   body {
-    height: 768px;
     padding-top: 30px;
+    height: 768px;
   }
 
   main {
@@ -218,4 +223,67 @@ p {
   .box-illustraton {
     display: none;
   }
+}
+
+@media (max-width: 720px) and (min-height: 768px) {
+  body {
+    padding-top: 30px;
+  }
+
+  main {
+    width: 375px;
+    height: 768px;
+  }
+
+
+  .container {
+    flex-wrap: wrap;
+    width: 85%;
+    height: 70%;
+  }
+
+  .left-side {
+    height: 20%;
+    background-image: url(../images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0 0;
+  }
+
+  .right-side {
+    height: 80%;
+    padding-top: 0 ;
+    padding-bottom: 0;
+  }
+
+  .header {
+    text-align: center;
+  }
+
+  .accordion-item {
+    margin-right: 8%;
+    margin-left: 8%;
+  }
+
+  .arrow-icon {
+    margin-right: 0;
+  }
+
+
+  .woman-illustraton-desktop {
+    display: none;
+  }
+
+  .woman-illustraton-mobile {
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-56%);
+  }
+
+  .box-illustraton {
+    display: none;
+  }
+}
 }
